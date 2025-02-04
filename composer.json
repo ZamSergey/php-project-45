@@ -1,5 +1,7 @@
 {
     "name": "hexlet/code",
+    "description": "Project Brain Games",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Hexlet\\Code\\": "src/"
