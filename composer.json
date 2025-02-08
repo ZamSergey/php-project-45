@@ -10,13 +10,15 @@
             "src/Cli.php",
             "src/Even.php",
             "src/Calc.php",
-            "src/Engine.php"
+            "src/Engine.php",
+            "src/Gcd.php"
         ]
     },
     "bin": [
         "bin/brain-games.php",
         "bin/brain-even.php",
-        "bin/brain-calc.php"
+        "bin/brain-calc.php",
+        "bin/brain-gcd.php"
     ],
     "authors": [
         {

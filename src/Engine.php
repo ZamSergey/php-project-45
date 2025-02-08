@@ -54,3 +54,39 @@ function calc($arg1, $arg2, $operation)
             break;
     }
 }
+
+function startBrainGame($questionAnswer, $titleQuestion)
+{
+   
+ 
+    $name = '';
+    $userAnswer = null;
+    
+    tipeText('Welcome to the Brain Game!');
+    getInformation('May I have your name?', $name);
+    greetingUser($name);
+    line($titleQuestion);
+
+    for ($currentQuestion = 0, $countAnswer = count($questionAnswer) - 1; $currentQuestion <= $countAnswer; $currentQuestion++ ) {
+        
+        $question = $questionAnswer[$currentQuestion][0];
+        $anser = $questionAnswer[$currentQuestion][1];
+
+        askQuestion($question);
+        getInformation('Your answer', $userAnswer);
+
+        $answerStr = is_numeric($userAnswer) ? intval($userAnswer) : $userAnswer;
+
+        if ($anser === $answerStr) {
+            tipeText("Correct!");
+            
+        } else {
+            wrongAnswer($answerStr, $anser);
+            tryAgain($name);
+            break;
+        }
+        if ($countAnswer === $currentQuestion) {
+            congratulations($name);
+        }
+    }
+}
