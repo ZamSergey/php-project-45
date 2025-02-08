@@ -5,7 +5,7 @@ namespace BrainGames\Even;
 use function cli\line;
 use function cli\prompt;
 
-function startEven()
+function run()
 {
 
     line('Welcome to the Brain Game!');
@@ -31,6 +31,7 @@ function startEven()
         if ($answerStr === "yes" || $answerStr === "no") {
             $answerNum = $answerStr === "yes" ? 1 : 0;
         }
+
         if ($isEven === $answerNum) {
             line("Correct!");
             $rightAnserCount++;
