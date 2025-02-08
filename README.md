@@ -4,5 +4,7 @@
 
 #Видеоинструкции
 - [Инструкция по установке игры Brain Games](https://asciinema.org/a/74fFtBZ3AyIuE5UzbcpPsmBkt)
-- [Пример победы](https://asciinema.org/a/bh5xgUGegByCmG99FVeZjKbaf)
-- [Пример поражения](https://asciinema.org/a/Rvi9wPfSsNdZv6QohlqwnxjBT)
+- [Brain-even. Пример победы](https://asciinema.org/a/bh5xgUGegByCmG99FVeZjKbaf)
+- [Brain-even. Пример поражения](https://asciinema.org/a/Rvi9wPfSsNdZv6QohlqwnxjBT)
+- [Brain-calc. Пример победы](https://asciinema.org/a/Wei15os0VsplkgZcdILdIWZiW)
+- [Brain-calc. Пример поражения](https://asciinema.org/a/X0S9BYMBXkbGTzz5aV6XF0q9j)
