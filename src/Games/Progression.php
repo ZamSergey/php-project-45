@@ -37,7 +37,7 @@ function generateQuestions(): array
     return [$question, $rigthAnswer];
 }
 
-function getProgression(number $startValue, number $step, number $length)
+function getProgression(int $startValue, int $step, int $length): array
 {
     $progression = [$startValue];
     for ($i = 1; $i < $length; $i++) {

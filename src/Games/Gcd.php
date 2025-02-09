@@ -40,7 +40,7 @@ function generateQuestions(): array
     return [$question, $rigthAnswer];
 }
 
-function findDivisor($number)
+function findDivisor(int $number): array
 {
     $devisors = [];
     for ($i = $number; $i >= 1; $i--) {

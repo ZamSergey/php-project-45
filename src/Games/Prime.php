@@ -29,7 +29,7 @@ function generateQuestions(): array
     return [$question, $rigthAnswer];
 }
 
-function isPrime(number $number): array
+function isPrime(int $number): array
 {
     $delimiters = [];
     for ($i = 2; $i < $number; $i++) {
