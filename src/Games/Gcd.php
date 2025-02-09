@@ -13,13 +13,13 @@ function run()
     for ($i = 0; $i < $numberOfQuestions; $i++) {
         $questions[] = generateQuestions();
     }
-
+    print_r($questions);
     startBrainGame($questions, $titleQuestion);
 }
 
 function generateQuestions(): array
 {
-    $MIN = 0;
+    $MIN = 1;
     $MAX = 100;
 
     $arg1 = rand($MIN, $MAX);
