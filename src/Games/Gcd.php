@@ -31,7 +31,7 @@ function generateQuestions(): array
     $question = "$arg1 $arg2";
 
     foreach ($devisors1 as $key => $item) {
-        if (in_array($item, $devisors2)) {
+        if (in_array($item, $devisors2, true)) {
             $rigthAnswer = $item;
             break;
         }
