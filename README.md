@@ -20,3 +20,7 @@
  ## Brain-progression
 - [Пример победы](https://asciinema.org/a/VtwmDAV33mfwrA9YP0GaGMDEq)
 - [Пример поражения](https://asciinema.org/a/h2XKIOCWZZb29GYgq03bPBNVY)
+
+ ## Brain-prime
+- [Пример победы](https://asciinema.org/a/IbAjz4fwRQrPJJuTX2w1eeoc0)
+- [Пример поражения](https://asciinema.org/a/6RkPULJluSItmCRJNrsIJgBkx)

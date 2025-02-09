@@ -12,15 +12,17 @@
             "src/Calc.php",
             "src/Engine.php",
             "src/Gcd.php",
-            "src/Progression.php"
+            "src/Progression.php",
+            "src/Prime.php"
         ]
     },
     "bin": [
-        "bin/brain-games.php",
-        "bin/brain-even.php",
-        "bin/brain-calc.php",
-        "bin/brain-gcd.php",
-        "bin/brain-progression"
+        "bin/brain-games",
+        "bin/brain-even",
+        "bin/brain-calc",
+        "bin/brain-gcd",
+        "bin/brain-progression",
+        "bin/brain-prime"
     ],
     "authors": [
         {
