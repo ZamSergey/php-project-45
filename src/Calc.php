@@ -4,14 +4,15 @@ namespace BrainGames\Calc;
 
 use function BrainGames\Engine\startBrainGame;
 
-function run() {
+function run()
+{
     $count = 3;
-    $titleQuestion = "What is the result of the expression?"; 
+    $titleQuestion = "What is the result of the expression?";
     $questions = [];
-    for($i = 0; $i < $count; $i++) {
+    for ($i = 0; $i < $count; $i++) {
         $questions[] = generateQuestions();
     }
-    
+
     startBrainGame($questions, $titleQuestion);
 }
 
@@ -25,6 +26,7 @@ function generateQuestions()
     $randomOperation = $operationsType[array_rand($operationsType, 1)];
     $rigthAnswer = null;
     $question = "$arg1 $randomOperation $arg2";
+
     switch ($randomOperation) {
         case '+':
             $rigthAnswer = $arg1 + $arg2;

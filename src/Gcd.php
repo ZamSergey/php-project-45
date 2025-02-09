@@ -2,55 +2,52 @@
 
 namespace BrainGames\Gcd;
 
-use function BrainGames\Engine\tipeText;
-use function BrainGames\Engine\getInformation;
-use function BrainGames\Engine\greetingUser;
-use function BrainGames\Engine\calc;
-use function BrainGames\Engine\askQuestion;
-use function BrainGames\Engine\wrongAnswer;
-use function BrainGames\Engine\tryAgain;
-use function BrainGames\Engine\congratulations;
+use function BrainGames\Engine\startBrainGame;
 
 function run()
 {
+    $count = 3;
+    $titleQuestion = "Find the greatest common divisor of given numbers.";
+    $questions = [];
 
+    for ($i = 0; $i < $count; $i++) {
+        $questions[] = generateQuestions();
+    }
+    print_r($questions);
+
+    startBrainGame($questions, $titleQuestion);
+}
+
+function generateQuestions()
+{
     $MIN = 0;
-    $MAX = 10;
+    $MAX = 100;
 
-    $randomNumber = 0;
-    $currentRightAnswer = null;
-    $rightAnserCount = 0;
-    $totalRightAnswer = 3;
-    $operationsType = ['+', '-', '*'];
-    $name = '';
-    $userAnswer = null;
+    $arg1 = rand($MIN, $MAX);
+    $arg2 = rand($MIN, $MAX);
 
-    tipeText('Welcome to the Brain Game!');
-    getInformation('May I have your name?', $name);
-    greetingUser($name);
+    $devisors1 = findDivisor($arg1);
+    $devisors2 = findDivisor($arg2);
+    $rigthAnswer = null;
+    $question = "$arg1 $arg2";
 
-    while ($rightAnserCount < $totalRightAnswer) {
-        $randomNumber1 = rand($MIN, $MAX);
-        $randomNumber2 = rand($MIN, $MAX);
-        $randomOperation = $operationsType[array_rand($operationsType, 1)];
-
-        $currentRightAnswer = calc($randomNumber1, $randomNumber2, $randomOperation);
-
-        askQuestion("$randomNumber1 $randomOperation $randomNumber2");
-        getInformation('Your answer', $userAnswer);
-
-        $answerStr = is_numeric($userAnswer) ? intval($userAnswer) : $userAnswer;
-
-        if ($currentRightAnswer === $answerStr) {
-            tipeText("Correct!");
-            $rightAnserCount++;
-        } else {
-            wrongAnswer($answerStr, $currentRightAnswer);
-            tryAgain($name);
+    foreach ($devisors1 as $key => $item) {
+        if (in_array($item, $devisors2)) {
+            $rigthAnswer = $item;
             break;
         }
-        if ($totalRightAnswer === $rightAnserCount) {
-            congratulations($name);
+    }
+
+    return [$question, $rigthAnswer];
+}
+
+function findDivisor($number)
+{
+    $devisors = [];
+    for ($i = $number; $i >= 1; $i--) {
+        if ($number % $i === 0) {
+            $devisors[] = $i;
         }
     }
+    return $devisors;
 }

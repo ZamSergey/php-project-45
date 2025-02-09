@@ -57,20 +57,18 @@ function calc($arg1, $arg2, $operation)
 
 function startBrainGame($questionAnswer, $titleQuestion)
 {
-   
- 
+
     $name = '';
     $userAnswer = null;
-    
+
     tipeText('Welcome to the Brain Game!');
     getInformation('May I have your name?', $name);
     greetingUser($name);
     line($titleQuestion);
 
-    for ($currentQuestion = 0, $countAnswer = count($questionAnswer) - 1; $currentQuestion <= $countAnswer; $currentQuestion++ ) {
-        
-        $question = $questionAnswer[$currentQuestion][0];
-        $anser = $questionAnswer[$currentQuestion][1];
+    for ($i = 0, $countAnswer = count($questionAnswer) - 1; $i <= $countAnswer; $i++) {
+        $question = $questionAnswer[$i][0];
+        $anser = $questionAnswer[$i][1];
 
         askQuestion($question);
         getInformation('Your answer', $userAnswer);
@@ -79,13 +77,12 @@ function startBrainGame($questionAnswer, $titleQuestion)
 
         if ($anser === $answerStr) {
             tipeText("Correct!");
-            
         } else {
             wrongAnswer($answerStr, $anser);
             tryAgain($name);
             break;
         }
-        if ($countAnswer === $currentQuestion) {
+        if ($countAnswer === $i) {
             congratulations($name);
         }
     }
