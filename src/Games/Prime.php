@@ -22,20 +22,24 @@ function generateQuestions(): array
     $MAX = 100;
 
     $arg1 = rand($MIN, $MAX);
-    $delimiters = isPrime($arg1);
-    $rigthAnswer = count($delimiters) === 0 ? 'yes' : 'no';
+
+    $rigthAnswer = isPrime($arg1) ? 'yes' : 'no';
     $question = $arg1;
 
     return [$question, $rigthAnswer];
 }
 
-function isPrime(int $number): array
+function isPrime(int $number): bool
 {
     $delimiters = [];
+    $result = false;
+    if ($number === 0 || $number === 1) {
+        return $result;
+    }
     for ($i = 2; $i < $number; $i++) {
         if ($number % $i === 0) {
             $delimiters[] = $i;
         }
     }
-    return $delimiters;
+    return count($delimiters) === 0;
 }

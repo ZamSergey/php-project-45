@@ -13,7 +13,6 @@ function run()
     for ($i = 0; $i < $numberOfQuestions; $i++) {
         $questions[] = generateQuestions();
     }
-    print_r($questions);
     startBrainGame($questions, $titleQuestion);
 }
 
