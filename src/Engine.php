@@ -33,7 +33,7 @@ function startBrainGame($questionAnswer, $titleQuestion)
             break;
         }
         if ($countAnswer === $i) {
-            line("Congratulations, %s", $name);
+            line("Congratulations, %s!", $name);
         }
     }
 }
