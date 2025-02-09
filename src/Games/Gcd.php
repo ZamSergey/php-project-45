@@ -6,11 +6,11 @@ use function BrainGames\Engine\startBrainGame;
 
 function run()
 {
-    $count = 3;
+    $numberOfQuestions = 3;
     $titleQuestion = "Find the greatest common divisor of given numbers.";
     $questions = [];
 
-    for ($i = 0; $i < $count; $i++) {
+    for ($i = 0; $i < $numberOfQuestions; $i++) {
         $questions[] = generateQuestions();
     }
 

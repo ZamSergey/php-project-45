@@ -6,10 +6,10 @@ use function BrainGames\Engine\startBrainGame;
 
 function run()
 {
-    $count = 3;
+    $numberOfQuestions = 3;
     $titleQuestion = 'Answer "yes" if the number is even, otherwise answer "no".';
     $questions = [];
-    for ($i = 0; $i < $count; $i++) {
+    for ($i = 0; $i < $numberOfQuestions; $i++) {
         $questions[] = generateQuestions();
     }
 

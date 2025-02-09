@@ -5,85 +5,35 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function tipeText($text)
-{
-    line($text);
-}
-
-function askQuestion($question)
-{
-    line("Question: %s", $question);
-}
-
-function greetingUser($name)
-{
-    line("Hello, %s!", $name);
-}
-
-function congratulations($name)
-{
-    line("Congratulations, %s", $name);
-}
-
-function getInformation($question, &$data)
-{
-    $data = prompt($question);
-    return $data;
-}
-
-function wrongAnswer($wrong, $write)
-{
-    line("'$wrong' is wrong answer ;(. Correct answer was '$write'");
-}
-
-function tryAgain($name)
-{
-    line("Let's try again,  %s!", $name);
-}
-
-function calc($arg1, $arg2, $operation)
-{
-    switch ($operation) {
-        case '+':
-            return $arg1 + $arg2;
-        case '-':
-            return $arg1 - $arg2;
-        case '*':
-            return $arg1 * $arg2;
-        default:
-            break;
-    }
-}
-
 function startBrainGame($questionAnswer, $titleQuestion)
 {
 
     $name = '';
     $userAnswer = null;
 
-    tipeText('Welcome to the Brain Game!');
-    getInformation('May I have your name?', $name);
-    greetingUser($name);
+    line('Welcome to the Brain Game!');
+    $name = prompt('May I have your name?');
+    line("Hello, %s!", $name);
     line($titleQuestion);
 
     for ($i = 0, $countAnswer = count($questionAnswer) - 1; $i <= $countAnswer; $i++) {
         $question = $questionAnswer[$i][0];
         $anser = $questionAnswer[$i][1];
 
-        askQuestion($question);
-        getInformation('Your answer', $userAnswer);
+        line("Question: %s", $question);
+        $userAnswer = prompt('Your answer');
 
         $answerStr = is_numeric($userAnswer) ? intval($userAnswer) : $userAnswer;
 
         if ($anser === $answerStr) {
-            tipeText("Correct!");
+            line("Correct!");
         } else {
-            wrongAnswer($answerStr, $anser);
-            tryAgain($name);
+            line("'$answerStr' is wrong answer ;(. Correct answer was '$anser'");
+            line("Let's try again,  %s!", $name);
             break;
         }
         if ($countAnswer === $i) {
-            congratulations($name);
+            line("Congratulations, %s", $name);
         }
     }
 }

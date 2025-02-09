@@ -8,12 +8,12 @@
         },
         "files": [
             "src/Cli.php",
-            "src/Even.php",
-            "src/Calc.php",
+            "src/Games/Even.php",
+            "src/Games/Calc.php",
             "src/Engine.php",
-            "src/Gcd.php",
-            "src/Progression.php",
-            "src/Prime.php"
+            "src/Games/Gcd.php",
+            "src/Games/Progression.php",
+            "src/Games/Prime.php"
         ]
     },
     "bin": [
