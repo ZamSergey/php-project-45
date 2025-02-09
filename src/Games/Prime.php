@@ -16,7 +16,7 @@ function run()
     startBrainGame($questions, $titleQuestion);
 }
 
-function generateQuestions()
+function generateQuestions(): array
 {
     $MIN = 0;
     $MAX = 100;
@@ -29,7 +29,7 @@ function generateQuestions()
     return [$question, $rigthAnswer];
 }
 
-function isPrime($number)
+function isPrime(number $number): array
 {
     $delimiters = [];
     for ($i = 2; $i < $number; $i++) {

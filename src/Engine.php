@@ -5,7 +5,7 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function startBrainGame($questionAnswer, $titleQuestion)
+function startBrainGame(array $questionAnswer, string $titleQuestion): void
 {
 
     $name = '';

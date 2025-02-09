@@ -17,7 +17,7 @@ function run()
     startBrainGame($questions, $titleQuestion);
 }
 
-function generateQuestions()
+function generateQuestions(): array
 {
     $MIN = 0;
     $MAX = 20;
@@ -37,7 +37,7 @@ function generateQuestions()
     return [$question, $rigthAnswer];
 }
 
-function getProgression($startValue, $step, $length)
+function getProgression(number $startValue, number $step, number $length)
 {
     $progression = [$startValue];
     for ($i = 1; $i < $length; $i++) {

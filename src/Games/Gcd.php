@@ -17,7 +17,7 @@ function run()
     startBrainGame($questions, $titleQuestion);
 }
 
-function generateQuestions()
+function generateQuestions(): array
 {
     $MIN = 0;
     $MAX = 100;
