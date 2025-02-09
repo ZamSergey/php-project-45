@@ -29,7 +29,7 @@ function startBrainGame($questionAnswer, $titleQuestion)
             line("Correct!");
         } else {
             line("'$answerStr' is wrong answer ;(. Correct answer was '$anser'");
-            line("Let's try again,  %s!", $name);
+            line("Let's try again, %s!", $name);
             break;
         }
         if ($countAnswer === $i) {
