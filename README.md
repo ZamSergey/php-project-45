@@ -6,13 +6,17 @@
 - [Инструкция по установке игры Brain Games](https://asciinema.org/a/74fFtBZ3AyIuE5UzbcpPsmBkt)
 
 ## Brain-even
-- [Brain-even. Пример победы](https://asciinema.org/a/bh5xgUGegByCmG99FVeZjKbaf)
-- [Brain-even. Пример поражения](https://asciinema.org/a/Rvi9wPfSsNdZv6QohlqwnxjBT)
+- [Пример победы](https://asciinema.org/a/bh5xgUGegByCmG99FVeZjKbaf)
+- [Пример поражения](https://asciinema.org/a/Rvi9wPfSsNdZv6QohlqwnxjBT)
 
 ## Brain-calc
-- [Brain-calc. Пример победы](https://asciinema.org/a/Wei15os0VsplkgZcdILdIWZiW)
-- [Brain-calc. Пример поражения](https://asciinema.org/a/X0S9BYMBXkbGTzz5aV6XF0q9j)
+- [Пример победы](https://asciinema.org/a/Wei15os0VsplkgZcdILdIWZiW)
+- [Пример поражения](https://asciinema.org/a/X0S9BYMBXkbGTzz5aV6XF0q9j)
 
 ## Brain-gcd
-- [Brain-gcd. Пример победы](https://asciinema.org/a/aAAUoliE0hKnNGt1xHygHQhl4)
-- [Brain-gcd. Пример поражения](https://asciinema.org/a/pbLnc4SYt2uoKa2Zt2VB1iKdT)
+- [Пример победы](https://asciinema.org/a/aAAUoliE0hKnNGt1xHygHQhl4)
+- [Пример поражения](https://asciinema.org/a/pbLnc4SYt2uoKa2Zt2VB1iKdT)
+
+ ## Brain-progression
+- [Пример победы](https://asciinema.org/a/VtwmDAV33mfwrA9YP0GaGMDEq)
+- [Пример поражения](https://asciinema.org/a/h2XKIOCWZZb29GYgq03bPBNVY)
