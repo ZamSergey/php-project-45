@@ -31,7 +31,7 @@ function startBrainGame(array $questionAnswer, string $titleQuestion): void
     line("Congratulations, %s!", $name);
 }
 
-function calculate(sting $operation, int $arg1, int $arg2): int
+function calculate(string $operation, int $arg1, int $arg2): int
 {
     $rigthAnswer = null;
     switch ($operation) {
