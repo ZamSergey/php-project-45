@@ -3,6 +3,7 @@
 namespace BrainGames\Gcd;
 
 use function BrainGames\Engine\startBrainGame;
+use function BrainGames\Engine\findDivisor;
 
 function run()
 {
@@ -10,42 +11,16 @@ function run()
     $titleQuestion = "Find the greatest common divisor of given numbers.";
     $questions = [];
 
-    for ($i = 0; $i < $numberOfQuestions; $i++) {
-        $questions[] = generateQuestions();
-    }
-    startBrainGame($questions, $titleQuestion);
-}
-
-function generateQuestions(): array
-{
     $MIN = 1;
     $MAX = 100;
 
-    $arg1 = rand($MIN, $MAX);
-    $arg2 = rand($MIN, $MAX);
+    for ($i = 0; $i < $numberOfQuestions; $i++) {
+        $arg1 = rand($MIN, $MAX);
+        $arg2 = rand($MIN, $MAX);
 
-    $devisors1 = findDivisor($arg1);
-    $devisors2 = findDivisor($arg2);
-    $rigthAnswer = null;
-    $question = "$arg1 $arg2";
-
-    foreach ($devisors1 as $key => $item) {
-        if (in_array($item, $devisors2, true)) {
-            $rigthAnswer = $item;
-            break;
-        }
+        $rigthAnswer = findDivisor($arg1, $arg2);
+        $question = "$arg1 $arg2";
+        $questions[] = ['question' => $question, 'answer' => $rigthAnswer];
     }
-
-    return [$question, $rigthAnswer];
-}
-
-function findDivisor(int $number): array
-{
-    $devisors = [];
-    for ($i = $number; $i >= 1; $i--) {
-        if ($number % $i === 0) {
-            $devisors[] = $i;
-        }
-    }
-    return $devisors;
+    startBrainGame($questions, $titleQuestion);
 }

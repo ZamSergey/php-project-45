@@ -9,22 +9,16 @@ function run()
     $numberOfQuestions = 3;
     $titleQuestion = 'Answer "yes" if the number is even, otherwise answer "no".';
     $questions = [];
-    for ($i = 0; $i < $numberOfQuestions; $i++) {
-        $questions[] = generateQuestions();
-    }
 
-    startBrainGame($questions, $titleQuestion);
-}
-
-function generateQuestions(): array
-{
     $MIN = 0;
     $MAX = 100;
 
-    $arg1 = rand($MIN, $MAX);
+    for ($i = 0; $i < $numberOfQuestions; $i++) {
+        $arg1 = rand($MIN, $MAX);
+        $rigthAnswer = $arg1 % 2 === 0 ? 'yes' : 'no';
+        $question = $arg1;
+        $questions[] = ['question' => $question, 'answer' => $rigthAnswer];
+    }
 
-    $rigthAnswer = $arg1 % 2 === 0 ? 'yes' : 'no';
-    $question = $arg1;
-
-    return [$question, $rigthAnswer];
+    startBrainGame($questions, $titleQuestion);
 }
