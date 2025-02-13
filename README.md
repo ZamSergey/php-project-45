@@ -10,7 +10,13 @@
 - Brain-progression. Вычисление недостающего члена прогресии
 - Brain-prime. Определенить натуральное ли число
 
-# Видеоинструкции
+# Установка
+Для установки Brain Games необходимо выполнить команду
+```
+make install
+```
+
+# Видеоинструкция по установке
 - [Инструкция по установке игры Brain Games](https://asciinema.org/a/74fFtBZ3AyIuE5UzbcpPsmBkt)
 
 ## Brain-even

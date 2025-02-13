@@ -2,18 +2,19 @@
     "name": "hexlet/code",
     "description": "Project Brain Games",
     "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Hexlet\\Code\\": "src/"
-        },
+    "autoload": {        
         "files": [
             "src/Cli.php",
+            "src/Engine.php",
             "src/Games/Even.php",
             "src/Games/Calc.php",
-            "src/Engine.php",
+            "src/Games/Calculate.php",            
             "src/Games/Gcd.php",
+            "src/Games/FindDivisor.php",
             "src/Games/Progression.php",
-            "src/Games/Prime.php"
+            "src/Games/GetProgression.php",
+            "src/Games/Prime.php",
+            "src/Games/IsPrime.php"
         ]
     },
     "bin": [
