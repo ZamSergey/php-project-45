@@ -3,7 +3,6 @@
 namespace BrainGames\Progression;
 
 use function BrainGames\Engine\startBrainGame;
-use function BrainGames\GetProgression\getProgression;
 
 const NUMBER_OF_QUESTIONS = 3;
 const QUESTION = "What number is missing in the progression?";
@@ -30,4 +29,13 @@ function run()
     }
 
     startBrainGame($questions, QUESTION);
+}
+
+function getProgression(int $startValue, int $step, int $length): array
+{
+    $progression = [$startValue];
+    for ($i = 1; $i < $length; $i++) {
+        $progression[$i] =  $progression[$i - 1] + $step;
+    }
+    return $progression;
 }

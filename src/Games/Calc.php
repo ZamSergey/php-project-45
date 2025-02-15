@@ -3,7 +3,6 @@
 namespace BrainGames\Calc;
 
 use function BrainGames\Engine\startBrainGame;
-use function BrainGames\Calculate\calculate;
 
 const NUMBER_OF_QUESTIONS = 3;
 const QUESTION = "What is the result of the expression?";
@@ -25,4 +24,24 @@ function run()
     }
 
     startBrainGame($questions, QUESTION);
+}
+
+function calculate(string $operation, int $arg1, int $arg2): int
+{
+    $rigthAnswer = null;
+    switch ($operation) {
+        case '+':
+            $rigthAnswer = $arg1 + $arg2;
+            break;
+        case '-':
+            $rigthAnswer = $arg1 - $arg2;
+            break;
+        case '*':
+            $rigthAnswer = $arg1 * $arg2;
+            break;
+        default:
+            break;
+    }
+
+    return $rigthAnswer;
 }

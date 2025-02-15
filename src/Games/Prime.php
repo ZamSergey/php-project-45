@@ -3,7 +3,6 @@
 namespace BrainGames\Prime;
 
 use function BrainGames\Engine\startBrainGame;
-use function BrainGames\IsPrime\isPrime;
 
 const NUMBER_OF_QUESTIONS = 3;
 const QUESTION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -23,4 +22,19 @@ function run()
     }
 
     startBrainGame($questions, QUESTION);
+}
+
+function isPrime(int $number): bool
+{
+    $delimiters = [];
+    $result = false;
+    if ($number === 0 || $number === 1) {
+        return $result;
+    }
+    for ($i = 2; $i < $number; $i++) {
+        if ($number % $i === 0) {
+            $delimiters[] = $i;
+        }
+    }
+    return count($delimiters) === 0;
 }
